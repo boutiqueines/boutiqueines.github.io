@@ -14,8 +14,8 @@
 		.material-icons.md-36 { font-size: 36px; }
 		.material-icons.md-48 { font-size: 48px; }
         .alpha1 {background-color: blueviolet;}
-        .alpha2 { background-color: rgb(138 43 226 / 50%)}
-        .alpha3 {ackground-color: rgb(138 43 226 / 0.1)}
+        .alpha2 {background-color: rgb(138 43 226 / 50%)}
+        .alpha3 {background-color: rgb(138 43 226 / 0.1)}
     </style>
 </head>
 
@@ -48,11 +48,11 @@
     <div class="alpha2">
         <div class="container" >
             <div class="row text-center shadow-lg">
-                <div class="col-6 btn btn-primary alpha1 py-2" style="border-radius: 0px; border-color: rgb(255, 255, 255, 0.2);">
-                    <a href="tel:0551200061"><span class="material-icons">phone</span></a>
+                <div onclick="Call();" class="col-6 btn btn-secondary alpha1 py-2" style="border-radius: 0px; border-color: rgb(255, 255, 255, 0.2);">
+                    <span class="material-icons">phone</span>
                 </div>
-                <div class="col-6 btn btn-danger alpha1 py-2" style="border-radius: 0px; border-color: rgb(255, 255, 255, 0.2);">
-                    <a href="mailto:zorina.shop16@gmail.com"><span class="material-icons">email</span></a>
+                <div onclick="Email();" class="col-6 btn btn-secondary alpha1 py-2" style="border-radius: 0px; border-color: rgb(255, 255, 255, 0.2);">
+                    <span class="material-icons">email</span>
                 </div>
             </div>
         </div>
@@ -106,6 +106,16 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        function Email() 
+        {
+            window.location = "mailto:zorina.shop16@gmail.com";
+        }
+        function Call() 
+        {
+            window.location = "tel:0551200061";
+        }
+    </script>
 </body>
 
 </html>
