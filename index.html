@@ -80,7 +80,7 @@
                             <div class="flex-fill pl-3 pr-3">
                                 <div class="text-muted fs-13px">Social Media</div>
                                 <div class="text-center align-center d-flex justify-content-evenly">
-                                	<a href="fb://page/113654670080653">
+                                	<a href="#" onclick="facebook()">
                                         <img class="img-fluid mx-auto d-block" width="48px" src="facebook.png"/>
                                     </a>
 									<a href="instagram://user?username=zorinadz">
@@ -92,7 +92,7 @@
                                 	<a href="https://wa.me/213551200061">
                                         <img class="img-fluid mx-auto d-block" width="48px" src="whatsapp.png"/>
                                     </a>
-                                	<a href="viber://chat?number=213551200061">
+                                	<a href="#" onclick="viber()">
                                         <img class="img-fluid mx-auto d-block" width="48px" src="viber.png"/>
                                     </a>
                                 </div>
@@ -107,6 +107,9 @@
         </div>
     </div>
     <script type="text/javascript">
+
+alert(navigator.appVersion);
+
         function Location() 
         {
             window.location = "https://goo.gl/maps/ukzDqZ6PZoTFjoxH6";
@@ -115,6 +118,30 @@
         {
             window.location = "tel:0551200061";
         }
+
+        function viber() {
+            if (navigator.appVersion.indexOf("Mac OS X") != -1) {
+                window.location = "viber://chat/?number=%2B213551200061";
+            }
+            else
+            {
+                window.location = "viber://chat?number=213551200061";
+            }
+        }
+
+        function facebook() {
+            if (navigator.appVersion.indexOf("Mac OS X") != -1) {
+                window.location = "";
+            }
+            else if (navigator.appVersion.indexOf("Android") != -1)
+            {
+                window.location = "fb://page/113654670080653";
+            }
+            else {
+                window.location = "https://www.facebook.com/Zorina.Alger";
+            }
+        }
+
     </script>
 </body>
 
